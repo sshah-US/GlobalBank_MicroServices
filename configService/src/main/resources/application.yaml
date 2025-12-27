@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: configService
+  profiles:
+    active: git
+  cloud:
+    config:
+     server:
+      git:
+        uri: "https://github.com/sshah-US/easyBank_config.git"
+        default-label: main
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+server:
+  port: "8090"
+management:
+  endpoints:
+    web:
+     exposure:
+      include: "*"
