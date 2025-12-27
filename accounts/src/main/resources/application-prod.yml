@@ -1,0 +1,13 @@
+spring:
+ config:
+  activate:
+   on-profile: "prod"
+
+build:
+  version: "1.0"
+accounts:
+ message: "Account Microservice"
+ contactDetails:
+  name: "Rohan"
+  email: "rohan@companyname.com"
+ env: "prod"

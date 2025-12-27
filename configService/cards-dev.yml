@@ -1,0 +1,14 @@
+
+build:
+  version: "2.0"
+cards:
+ message: "Card Microservice using rabbitmq"
+ contactDetails:
+  name: "Soha"
+  email: "soha123@companyname.com"
+
+ env: "dev"
+
+
+
+

@@ -1,0 +1,14 @@
+spring:
+   config:
+     activate:
+       on-profile: "dev"
+
+build:
+   version: "2.0"
+
+accounts:
+  message: "Cards MicroService"
+  contactDetails:
+    name: "Sham"
+    email: "sham@companyname.com"
+  env: "Dev"

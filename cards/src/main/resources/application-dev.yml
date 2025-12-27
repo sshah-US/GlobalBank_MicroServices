@@ -1,0 +1,13 @@
+spring:
+ config:
+  activate:
+   on-profile: "dev"
+
+build:
+  version: "2.0"
+cards:
+ message: "Card Microservice"
+ contactDetails:
+  name: "Soha"
+  email: "soha@companyname.com"
+ env: "dev"

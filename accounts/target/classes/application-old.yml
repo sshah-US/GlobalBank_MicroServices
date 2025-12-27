@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  config:
+   import:
+    - "application-dev.yml"
+    - "application-prod.yml"
+  Profiles:
+   active: 
+    - "dev"
+build:
+  version: "3.0"
+accounts:
+ message: "Account Microservice"
+ contactDetails:
+  name: "Ram"
+  email: "dev_ops@companyname.com"
+ env: "local"

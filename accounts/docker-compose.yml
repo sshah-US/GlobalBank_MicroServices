@@ -1,0 +1,17 @@
+services:
+  accounts:
+    image: "sshah79/accounts:l1"
+    container_name: "account_service"
+    ports:
+      - "8080:8080"
+  cards:
+      image: "sshah79/cards:l1"
+      container_name: "card_service"
+      ports:
+        - "8081:8081"
+  loans:
+      image: "sshah79/loans:l1"
+      container_name: "loan_service"
+      ports:
+       - "8082:8082"
+
