@@ -1,9 +1,0 @@
-
-build:
-  version: "1.0"
-accounts:
- message: "Account Microservice using rabbitmq"
- contactDetails:
-  name: "Rohan"
-  email: "rohan@companyname.com"
- env: "prod"

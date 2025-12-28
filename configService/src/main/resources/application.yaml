@@ -7,7 +7,7 @@ spring:
     config:
      server:
       git:
-        uri: "https://github.com/sshah-US/easyBank_config.git"
+        uri: "https://github.com/sshah-US/GlobalBank_Config.git"
         default-label: main
   rabbitmq:
     host: "localhost"
