@@ -33,29 +33,25 @@ management:
       exposure:
         include: "*"
   endpoint:
-    shutdown:
-      access: unrestricted
-    health:
-     probes:
-        enabled: true
+        shutdown:
+          access: unrestricted
+        health:
+          probes:
+            enabled: true
   health:
-    livenessState:
-     enabled: true
-    readinessState:
+        livenessState:
+          enabled: true
+        readinessState:
+          enabled: true
+          
+  info:
+    env:
       enabled: true
 eureka:
- instance:
-  prefer-ip-address: true
-
- client:
-  register-with-eureka: true
-  fetch-registry: true
-  serviceUrl:
-    defaultZone: http://localhost:8070/eureka/
-
-info:
- app:
-  name: "accounts"
-  description: "Easy Bank Accounts Application"
-  version: "1.0.0"
-  
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/  

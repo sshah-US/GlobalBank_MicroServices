@@ -33,28 +33,25 @@ management:
       exposure:
         include: "*"
   endpoint:
-    health:
-     probes:
-        enabled: true
+        shutdown:
+          access: unrestricted
+        health:
+          probes:
+            enabled: true
   health:
-    livenessState:
-     enabled: true
-    readinessState:
+        livenessState:
+          enabled: true
+        readinessState:
+          enabled: true
+          
+  info:
+    env:
       enabled: true
 eureka:
   instance:
-   prefer-ip-address: true
-
+    preferIpAddress: true
   client:
-    register-with-eureka: true
-    fetch-registry: true
+    fetchRegistry: true
+    registerWithEureka: true
     serviceUrl:
-      defaultZone: http://localhost:8070/eureka/
-
-info:
-  app:
-   name: "cards"
-   description: "Easy Bank Cards Application"
-   version: "1.0.0"
-    
-  
+      defaultZone: http://localhost:8070/eureka/  
