@@ -1,9 +1,0 @@
-
-build:
-  version: "3.0"
-accounts:
- message: "Account Microservice"
- contactDetails:
-  name: "Ram"
-  email: "dev_ops@companyname.com"
- env: "local"

@@ -1,9 +1,0 @@
-
-build:
-  version: "1.0"
-cards:
- message: "Loan Microservice"
- contactDetails:
-  name: "Sohan"
-  email: "sohan@companyname.com"
- env: "prod"
