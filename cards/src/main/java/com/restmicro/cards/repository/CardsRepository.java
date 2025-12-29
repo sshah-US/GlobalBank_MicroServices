@@ -1,22 +1,17 @@
 package com.restmicro.cards.repository;
 
-import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;
 
 import com.restmicro.cards.entity.Cards;
 
-import jakarta.transaction.Transactional;
+import java.util.Optional;
 
 @Repository
 public interface CardsRepository extends JpaRepository<Cards, Long> {
 
-    Optional<Cards> findByCustomerId(Long customerId);
+    Optional<Cards> findByMobileNumber(String mobileNumber);
 
-    @Transactional
-    @Modifying
-    void deleteByCustomerId(Long customerId);
+    Optional<Cards> findByCardNumber(String cardNumber);
 
 }

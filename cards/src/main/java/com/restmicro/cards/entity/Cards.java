@@ -8,27 +8,22 @@ import lombok.*;
 
 public class Cards extends BaseEntity {
 	
-	@Column(name="customer_id")
-    private Long customerId;
 
-    @Column(name="mobile_number")
-    private Long mobileNumber;
-    
-    @Column(name="card_number")
-    @Id
-    private Long cardNumber;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long cardId;
 
-    @Column(name="card_type")
-    private String cardType;
-    
-    @Column(name="total_limit")
-    private Long totalLimit;
-    
-    @Column(name="amount_used")
-    private Long amountUsed;
-    
-    @Column(name="available_amount")
-    private Long availableAmount;
+	private String mobileNumber;
+
+	private String cardNumber;
+
+	private String cardType;
+
+	private int totalLimit;
+
+	private int amountUsed;
+
+	private int availableAmount;
 
    
 }

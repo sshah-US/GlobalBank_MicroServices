@@ -13,6 +13,8 @@ public class Customer extends  BaseEntity {
     private Long customerId;
 
     private String name;
+    
+    private String cardNumber;
 
     private String email;
 
