@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: "gatewayserver"
+  config:
+    import: "optional:configserver:http://localhost:8090/"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  # if true then you will be able to access the list of routes on /actuator/gateway/routes 
+          lowerCaseServiceId: true # with this you will be able to access the service in lower case
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 2s    
+  data:
+    redis:
+      connect-timeout: 2s
+      host: localhost
+      port: 6379
+      timeout: 1s
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      access: unrestricted
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "gatewayserver"
+
+logging:
+  level:
+    com:
+      learn:
+        gatewayserver: DEBUG
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
